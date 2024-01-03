@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WishItem } from './wishItem';
+import events from '../shared/services/EventService';
 
 @Component({
   selector: 'app-root',
@@ -43,8 +44,10 @@ export class AppComponent {
     this.newWishItem = '';
   }
 
-  toggle(item: WishItem) {
-    item.isComplete = !item.isComplete;
-    console.log(item);
+  constructor()
+  {
+    events.listen('toggled',(e)=>{
+      console.log(e);
+    })
   }
 }

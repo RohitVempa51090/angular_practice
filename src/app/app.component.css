@@ -79,8 +79,6 @@
     text-align: center;
 }
 
-
-/* Listing wishes */
 .wishlist-container
 {
     display: flex;
@@ -88,16 +86,4 @@
     width: 50%;
     border: 1px solid red;
     justify-content: left;
-}
-
-ul
-{
-    padding: 0;
-}
-
-li 
-{
-    list-style:none;
-    font-size: large;
-    padding: 5px;
 }

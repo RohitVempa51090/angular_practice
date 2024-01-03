@@ -27,21 +27,8 @@
 
 <!-- Listing wishes -->
 <div class="wishlist-container">
-  <div *ngIf="visibleItems.length === 0; else showItems" class="no-wishes">
-    <h1>There are no wishes</h1>
-  </div>
-  <ng-template #showItems>
-    <ul>
-        <li *ngFor="let item of visibleItems; index as ii">
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input [checked]="item.isComplete" class="wish" type="checkbox" value="{{item}}"
-                    [attr.data-index]="ii"
-                    (click)="toggle(item)"
-                    >{{item.item}}
-                </label>
-            </div>
-        </li>
-    </ul>
-  </ng-template>
+  <app-list-wishes
+  [wishes]="visibleItems"
+  >
+  </app-list-wishes>
 </div>
